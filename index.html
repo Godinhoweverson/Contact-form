@@ -17,7 +17,7 @@
       <legend>
         <h1>Contact Us</h1>
       </legend>
-      <div class="name">
+      <div class="container-names">
         <div class="first-name">
           <label for="first_name">First Name *</label>
           <input type="text" id="first_name" name="first_name" autocomplete="first-name" required>  
@@ -31,16 +31,16 @@
       <label for="email">Email *</label>
       <input type="email" id="email" name="email" autocomplete="email" aria-invalid="true" aria-describedby="email-error" required class="email">
 
-      <label>Query Type *</label>
-      <div class="query-type">
-        <div class="radio-contaneir">
-          <input type="radio" id="general-enquiry" name="general" value="general Enquiry" class="radio-query">
-          <label for="general">General Enquiry</label>
+      <label class="query-type">Query Type *</label>
+      <div class="container-query-types">
+        <div class="radio-contaneir-left">
+            <input type="radio" id="general-enquiry" name="general" value="general Enquiry" class="radio-query">
+            <label for="general">General Enquiry</label>
+          </div>
+        <div class="radio-contaneir-right ">
+          <input type="radio" id="support-request" name="support" value="support request"  class="radio-query">
+          <label for="support">Support Request</label>
         </div>
-       <div class="radio-contaneir">
-        <input type="radio" id="support-request" name="support" value="support request"  class="radio-query">
-        <label for="support">Support Request</label>
-       </div>
       </div>
       <label for="message">Message *</label>
       <input type='text' maxlength="100" minlength="10" id="message">
@@ -55,33 +55,5 @@
 
     </fieldset>
   </form>
-
-  <!-- Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon! -->
 </body>
 </html>

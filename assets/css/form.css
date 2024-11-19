@@ -12,6 +12,7 @@ body{
     min-height: 100vh;
     background-color:  hsl(148, 38%, 91%);
     font-family: "Karla", sans-serif;
+    color: hsl(187, 24%, 22%);
 }
 
 form{
@@ -28,11 +29,21 @@ fieldset{
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    width: 100%;
 }
 
 input:focus, textarea:focus, select:focus {
     outline: 2px solid #007bff;
   }
+
+label{
+    font-size: 16px;
+    letter-spacing: 0px;
+}
+
+.radio-contaneir-left label, .radio-contaneir-right label{
+   font-size: 18px;
+}
 
 legend{
     width: 100%;
@@ -48,72 +59,73 @@ legend h1{
     font-weight: 900;
 }
 
-input{
-    height: 51px;
-    border-radius: 8px;
-    border: 1px solid hsl(186, 15%, 59%);
-    width: 100%;
-}
-
-label{
-    width: 100%;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0px;
-}
-
-.name, .query-type{
+.container-names{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
+    flex-direction: row;
     width: 100%;
-    padding-bottom: 24px;
-    
-}
-.name{
-    height: 83px; 
+    height: 83px;
+    margin-bottom: 24px;
 }
 
-.first-name{
+.first-name, .last-name{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    width: 98.5%;
+    width: 50%;
+    height: 100%;
+}
+
+.first-name{
     padding-right: 8px;
 }
 
 .last-name{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 98.5%;
     padding-left: 8px;
 }
 
-.email{
-    margin-bottom: 23px;
+.first-name input, .last-name input, .email{
+    width: 100%;
+    height: 51px;
+    margin-top: 8px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 8px;
+}
+.query-type{
+    margin-top: 24px;
 }
 
-.radio-query{
-   height: 24px !important; 
-}
-
-.radio-contaneir{
+.container-query-types{
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 48.5%;
+    justify-content: flex-start;
+    width: 100%;
     height: 51px;
-    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.radio-contaneir-left, .radio-contaneir-right{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 100%;
     border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 8px;
+    padding-left: 24px;
 }
 
-.radio-contaneir input{
-    width: 15%;
+.radio-contaneir-left input, .radio-contaneir-right input{
+    margin-right: 12px;
 }
 
-.radio-contaneir label{
-    width: 85%;
+.radio-contaneir-left{
+    margin-right: 8px;
+}
+
+
+.radio-contaneir-right{
+    margin-left: 8px;
 }
