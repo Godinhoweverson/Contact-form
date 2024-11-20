@@ -34,22 +34,23 @@
       <label class="query-type">Query Type *</label>
       <div class="container-query-types">
         <div class="radio-contaneir-left">
-            <input type="radio" id="general-enquiry" name="general" value="general Enquiry" class="radio-query">
-            <label for="general">General Enquiry</label>
+            <input type="radio" id="query" name="query" value="general Enquiry" class="radio-query">
+            <label for="query">General Enquiry</label>
           </div>
         <div class="radio-contaneir-right ">
-          <input type="radio" id="support-request" name="support" value="support request"  class="radio-query">
-          <label for="support">Support Request</label>
+          <input type="radio" id="query" name="query" value="support request"  class="radio-query">
+          <label for="query">Support Request</label>
         </div>
       </div>
-      <label for="message">Message *</label>
-      <input type='text' maxlength="100" minlength="10" id="message">
 
-      <input type="checkbox" id="checkbox" name="checkbox" required>
-      <label for="checkbox"> I consent to being contacted by the team
-        To submit this form, please consent to being contacted</label>
-        sub
+      <label for="message" class="l-message">Message *</label>
+      <textarea name="message" id="message"></textarea>
 
+      <div class="checkbox">
+        <input type="checkbox" id="checkbox" name="checkbox" required>
+        <label for="checkbox"> I consent to being contacted by the team *</label>
+      </div>
+     
       <button type="submit">Submit</button>
 
 
