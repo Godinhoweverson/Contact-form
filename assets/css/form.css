@@ -32,9 +32,9 @@ fieldset{
     width: 100%;
 }
 
-input:focus,input[type="radio"]:focus textarea:focus, select:focus {
-    outline: 2px solid #007bff;
-  }
+/* input:focus,input[type="radio"]:focus textarea:focus, select:focus {
+    outline: 21px solid #007bff;
+  } */
 
 label{
     font-size: 16px;
@@ -169,14 +169,36 @@ textarea{
 
 .checkbox{
     display: flex;
-    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
     margin: 40px 0 40px 0;
 }
 
-.checkbox input{
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;  
+    appearance: none;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     width: 24px;
     height: 24px;
-    margin-right: 16px;
+    border: 1px solid hsl(186, 15%, 59%);
+    margin-right: 24px;
+}
+
+input[type="checkbox"]:checked::after{
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    border: 1px solid  hsl(169, 82%, 27%);
+    background-color:  hsl(169, 82%, 27%);
+    background-image: url(../images/check.svg);
 }
 
 button{
@@ -187,4 +209,8 @@ button{
     color: hsl(0, 0%, 100%);
     font-size: 18px;
     line-height: 150%;
+}
+
+button:hover{
+    background-color: hsl(187, 24%, 22%);
 }
