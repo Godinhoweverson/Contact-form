@@ -20,25 +20,25 @@
       <div class="container-names">
         <div class="first-name">
           <label for="first_name">First Name *</label>
-          <input type="text" id="first_name" name="first_name" autocomplete="first-name">  
+          <input type="text" id="first_name" name="first_name" autocomplete="first-name" required>  
         </div>
         <div class="last-name">
           <label for="last_name">Last Name *</label>
-          <input type="text" id="last_name" name="last_name" autocomplete="last_name">
+          <input type="text" id="last_name" name="last_name" autocomplete="last_name" required>
         </div>
       </div>
      
       <label for="email">Email *</label>
-      <input type="email" id="email" name="email" autocomplete="email" aria-invalid="true" aria-describedby="email-error" class="email">
+      <input type="email" id="email" name="email" autocomplete="email" aria-invalid="true" aria-describedby="email-error" class="email" required>
 
       <label class="query-type">Query Type *</label>
       <div class="container-query-types">
         <div class="radio-contaneir-left">
-            <input type="radio" id="query" name="query" value="general Enquiry" class="radio-query">
+            <input type="radio" id="query" name="query" value="general Enquiry" class="radio-query" required>
             <label for="query">General Enquiry</label>
           </div>
         <div class="radio-contaneir-right ">
-          <input type="radio" id="query" name="query" value="support request"  class="radio-query">
+          <input type="radio" id="query" name="query" value="support request"  class="radio-query" required>
           <label for="query">Support Request</label>
         </div>
       </div>
