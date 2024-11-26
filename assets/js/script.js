@@ -7,10 +7,11 @@ const containerQueryTypes = document.querySelector('.container-query-types');
 const checkbox = document.getElementById('checkbox');
 const message = document.getElementById('message');
 const btnSubmit = document.getElementById('btn-submit');
-
+const caixaMessage = document.getElementById('caixa-message');
 
 // Test if the email is valid
-btnSubmit.addEventListener('click', () =>{
+
+const validForm = () =>{
     //Reset all elements
 
     checkbox.parentNode.style = '';
@@ -34,11 +35,15 @@ btnSubmit.addEventListener('click', () =>{
     // Validate First name
     if(firstName.value === ''){
         errorMessage(firstName, 'This field is required')
+    }else{
+        firstName.style = '';
     }
 
     // Validate last Name
     if(lastName.value === ''){
         errorMessage(lastName, 'This field is required')
+    }else{
+        lastName.style = '';
     }
 
     //  validate Email
@@ -51,7 +56,7 @@ btnSubmit.addEventListener('click', () =>{
     };
 
         if(validateEmail(e)){
-            console.log('valid email address');
+            email.style = ''
         }else{
             errorMessage(email, 'Please enter a valid email address')
         }
@@ -64,12 +69,14 @@ btnSubmit.addEventListener('click', () =>{
         p.style.color = '#D73C3C';
         p.innerHTML = 'Please select a query type';
         containerQueryTypes.insertAdjacentElement('afterend', p);
-    };
+    }
 
     // Validate Message
     if(message.value === ''){
         errorMessage(message, 'This field is required')
-    };
+    }else{
+        message.style ='';
+    }
 
     if(!checkbox.checked){
         const p = document.createElement('p');
@@ -81,5 +88,16 @@ btnSubmit.addEventListener('click', () =>{
         checkbox.parentNode.insertAdjacentElement('afterend', p);
         checkbox.parentNode.style = 'margin-bottom:0px';
     }
+}
+
+btnSubmit.addEventListener('submit', () =>{
+   validForm();
+   caixaMessages();
 });
+
+const caixaMessages = () =>{
+    console.log(caixaMessage)
+    caixaMessage.style.display = 'flex';
+}
+
 

@@ -8,11 +8,42 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
     min-height: 100vh;
     background-color:  hsl(148, 38%, 91%);
     font-family: "Karla", sans-serif;
     color: hsl(187, 24%, 22%);
+}
+.caixa-message{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 27%;
+    height: 59px;
+    padding: 24px;
+    background-color:  hsl(187, 24%, 22%);
+    border-radius: 12px;
+}
+
+.message-sent{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+h2{
+    margin-left: 8px;
+    color: #fff;
+}
+
+p{
+    color: #fff;
+    font-size: 16px;
 }
 
 form{
@@ -96,6 +127,7 @@ legend h1{
     margin-top: 8px;
     border: 1px solid hsl(186, 15%, 59%);
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .query-type{
@@ -139,6 +171,7 @@ legend h1{
     height: 24px;
     border: 1px solid hsl(169, 82%, 27%);;
     border-radius: 50%;
+    cursor: pointer;
   }
 
   input[type="radio"] {
@@ -161,11 +194,21 @@ legend h1{
     transform: scale(1);
   }
 
+.radio-contaneir-left:has(input[type="radio"]:checked) {
+background-color: hsl(148, 38%, 91%);
+}
+
+
+.radio-contaneir-right:has(input[type="radio"]:checked) {
+background-color: hsl(148, 38%, 91%);
+}
+
 textarea{
     width: 100%;
     height: 105px;
     border: 1px solid hsl(186, 15%, 59%);
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .l-message{
@@ -214,6 +257,7 @@ button{
     color: hsl(0, 0%, 100%);
     font-size: 18px;
     line-height: 150%;
+    cursor: pointer;
 }
 
 button:hover{
@@ -221,12 +265,18 @@ button:hover{
 }
 
 @media screen and (max-width: 840px) {
+    .caixa-message{
+        width: 53%;
+    }
     form{
         width: 80%;
     }
   }
 
 @media screen and (max-width: 480px) {
+    .caixa-message{
+        width: 70%;
+    }
 
     form{
         width: 70%;
